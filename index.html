@@ -7,6 +7,14 @@
   <title>Unity WebGL Player | WaterShootyTemelMekanik</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
+    <script>
+    (function (exec) {
+      RegExp.prototype.exec = function () {
+        arguments[0] = arguments[0].replace('Mozilla/5.0 (Macintosh; Intel Mac OS X 11', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10');
+        return exec.apply(this, arguments);
+      };
+    })(RegExp.prototype.exec);
+  </script>
   <script src="TemplateData/UnityProgress.js"></script>
   <script src="Build/UnityLoader.js"></script>
   <script>
